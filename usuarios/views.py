@@ -1,9 +1,10 @@
 from django.shortcuts import render
+from usuarios.forms import LoginForms
 
 # Create your views here.
 def login(request):
-    pass
-    return render(request, 'usuarios/login.html')
+    form = LoginForms()
+    return render(request, 'usuarios/login.html', {'form': form})
 
 def cadastro(request):
     pass
